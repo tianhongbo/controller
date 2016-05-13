@@ -1,30 +1,31 @@
 # controller
 This is a controller written by Go to create, delete a Android emulator based Android SDK.
 
-# How to install
-## Step 1: Install Android SDK
+# How can I install it?
+## 1. Install Android SDK
 - install Java SDK
 - install Android Studio
 - install Android 2.3.3(API 10)
 
-## Step 2: Install GO
+## 2. Install GO
 
-## Step 3: Install adb (even though it has been installed together with Android SDK/Studio)
-
+## 3. Install adb
+even though it has been installed together with Android SDK/Studio
 `$ sudo apt-get install android-tools-adb`
 
-Step 4: Install noVNC
+## 4. Install noVNC
 $ sudo git clone git://github.com/kanaka/noVNC
 
-Step 5: Git Clone NODE source code
+## Step 5: Git Clone NODE source code
 $ git clone https://github.com/tianhongbo/node.git
 
-Step 6: Modify source code
+# How can I configure it?
+## 1. Modify source code
 - install.sh
 - deviceinstall.sh
 - repo.go
 
-Step 7: Set environment variables
+## 2. Set environment variables
 $ sudo vi /etc/environment
 
 - add emulator tools to PATH
@@ -33,35 +34,33 @@ $ sudo vi /etc/environment
 - add GOPATH
 GOPATH=/home/ubuntu2/controller
 
-Step 8: configure port forwarding for SSH functions
+## 3. configure port forwarding for SSH functions
 - iptables for Ubuntu
 - ip for mac
 
 For example(for ubuntu):
-# This is for eth0
+### This is for eth0
 - sysctl -w net.ipv4.conf.eth0.route_localnet=1
 - iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
 
-# This is for wlan
+### This is for wlan
 - sysctl -w net.ipv4.conf.wlan0.route_localnet=1
 - iptables -t nat -I PREROUTING -p tcp -i wlan0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
 
-
-#Done
-
-#Debugging
-1. check adb forward
+# How can I debug?
+## 1. check adb forward
 - $ adb forward --list
 
 
-2. check iptables NAT
+## 2. check iptables NAT
 - $ sudo iptables -t nat -L -n -v
 
-#SSH
-# user: "test" / password: "test"
+## 3. SSH
+on the mobile phone
+user: "test" / password: "test"
 ssh test@192.168.1.24 -p 5921
 
-#VNC
+## 4. VNC
 It seems the behaviors in MAC and Ubuntu are different. For example, VNC launch.sh only create
 listening port on the external interface in MAC. However, it will create listening port on all
 the interfaces including localhost.
