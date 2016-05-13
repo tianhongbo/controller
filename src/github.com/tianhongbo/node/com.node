@@ -1,0 +1,23 @@
+rdr on en0 inet proto tcp to any port 5921 -> 127.0.0.1 port 5921
+rdr on en0 inet proto tcp to any port 5922 -> 127.0.0.1 port 5922
+rdr on en0 inet proto tcp to any port 5923 -> 127.0.0.1 port 5923
+rdr on en0 inet proto tcp to any port 5924 -> 127.0.0.1 port 5924
+rdr on en0 inet proto tcp to any port 5923 -> 127.0.0.1 port 5923
+rdr on en0 inet proto tcp to any port 5924 -> 127.0.0.1 port 5924
+rdr on en0 inet proto tcp to any port 5925 -> 127.0.0.1 port 5925
+rdr on en0 inet proto tcp to any port 5926 -> 127.0.0.1 port 5926
+rdr on en0 inet proto tcp to any port 5927 -> 127.0.0.1 port 5927
+rdr on en0 inet proto tcp to any port 5928 -> 127.0.0.1 port 5928
+rdr on en0 inet proto tcp to any port 5929 -> 127.0.0.1 port 5929
+rdr on en0 inet proto tcp to any port 5930 -> 127.0.0.1 port 5930
+rdr on en0 inet proto tcp to any port 5931 -> 127.0.0.1 port 5931
+rdr on en0 inet proto tcp to any port 5932 -> 127.0.0.1 port 5932
+rdr on en0 inet proto tcp to any port 5933 -> 127.0.0.1 port 5933
+rdr on en0 inet proto tcp to any port 5934 -> 127.0.0.1 port 5934
+rdr on en0 inet proto tcp to any port 5935 -> 127.0.0.1 port 5935
+rdr on en0 inet proto tcp to any port 5936 -> 127.0.0.1 port 5936
+rdr on en0 inet proto tcp to any port 5937 -> 127.0.0.1 port 5937
+rdr on en0 inet proto tcp to any port 5938 -> 127.0.0.1 port 5938
+rdr on en0 inet proto tcp to any port 5939 -> 127.0.0.1 port 5939
+rdr on en0 inet proto tcp to any port 5940 -> 127.0.0.1 port 5940
+
