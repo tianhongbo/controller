@@ -24,9 +24,11 @@ https://developer.android.com/studio/command-line/sdkmanager.html
 `$ sudo apt-update`
 
 /* check whether java is installed or not */
+
 `$ java -version`
 
 /* Install java sdk */
+
 `$ sudo apt-get install default-jdk`
 
 /* check java path*/
@@ -42,7 +44,109 @@ JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 ```
 
 - install Android SDK Tool (25.2.3)
+
+/* install Android SDK tool */
+```
+$ mkdir /usr/local/android-sdk-linux
+$ cd /usr/local/android-sdk-linux
+$ wget https://dl.google.com/android/repository/tools_r25.2.3-linux.zip
+```
+/* install unzip */
+
+`$ sudo apt install unzip`
+
+/* unzip Android SDK tool to android-sdk-linux/ */
+
+```
+$ unzip tools_r25.2.3-linux.zip android-sdk-linux/
+$ ls /usr/local/android-sdk-linux/
+tools
+```
+
+/* set environment */
+```
+$ sudo vi /etc/environment
+"/usr/local/games:/usr/local/android-sdk-linux/tools:/usr/local/android-sdk-linux/platform-tools"
+```
+
 - install Android 2.3.3(API 10)
+
+/*
+ * install SDK packages via /tools/bin/sdkmanager
+ * The sdkmanager is a command line tool that allows you to view,
+ * install, update, and uninstall packages for the Android SDK.
+ * If you're using Android Studio, then you do not need to use
+ * this tool and you can instead manage your SDK packages from the IDE.
+ * link: https://developer.android.com/studio/command-line/sdkmanager.html#usage
+ */
+
+/* list all available SDK package */
+```
+$ cd /usr/local/android-sdk-linux/tools/bin
+$ ./sdkmanager --list
+```
+/* install the platform tools */
+
+`$ ./sdkmanager "platform-tools"`
+
+/* install the Android 2.3.3(API 10)
+ * Why API 10?
+ * No special reason, just because we tested it from beginning
+ */
+
+`$ ./sdkmanager "platforms;android-10"`
+
+/*
+ * create AVD
+ */
+```
+$ android -s create avd -n android-api-10-5555 -t android-10 --abi default/armeabi
+Android 2.3.3 is a basic Android platform.
+Do you wish to create a custom hardware profile [no]no
+Created AVD 'android-api-10-5555' based on Android 2.3.3, ARM (armeabi) processor,
+with the following hardware config:
+hw.lcd.density=240
+hw.ramSize=256
+vm.heapSize=24
+```
+
+/*
+ * Add lib to PATH
+ * Why?
+ * some dynamically linked libraries were moved around with the new Android emulator.
+ * All you need to do is:
+ *   add the folder with the libraries to the search path
+ *   before you launch the emulator from command line.
+ */
+/* set environment */
+```
+$ sudo vi /etc/environment
+export LD_LIBRARY_PATH="$ANDROID_SDK_HOME/tools/lib64:$ANDROID_SDK_HOME/tools/lib64/qt/lib:$LD_LIBRARY_PATH"
+
+$ source /etc/environment
+
+$ echo $LD_LIBRARY_PATH
+/usr/local/android-sdk-linux/tools/lib64:/usr/local/android-sdk-linux/tools/lib64/qt/lib:
+```
+
+/*
+ * create emulator
+ */
+```
+$ emulator64-arm -avd android-api-10-5555 -wipe-data -no-window -no-boot-anim -noskin -port 5556
+emulator: WARNING: the -no-skin flag is obsolete. to have a non-skinned virtual device, create one through the AVD manager
+emulator: WARNING: Classic qemu does not support SMP. The hw.cpu.ncore option from your config file is ignored.
+emulator: warning: opening audio output failed
+
+emulator: Requested console port 5556: Inferring adb port 5557.
+emulator: Listening for console connections on port: 5556
+emulator: Serial number of this emulator (for ADB): emulator-5556
+```
+/*
+ * connect emulator
+ */
+
+`$ adb devices`
 
 ## 2. Install GO
 In the EC2, AWS has already installed go, so nothing to do here.
