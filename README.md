@@ -19,7 +19,7 @@ https://developer.android.com/studio/command-line/sdkmanager.html
 
 # How can I install it?
 ## 1. Install Android SDK
-- install Java SDK (java-8-openjdk-amd64)
+### install Java SDK (java-8-openjdk-amd64)
 
 `$ sudo apt-update`
 
