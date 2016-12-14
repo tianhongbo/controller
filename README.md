@@ -36,7 +36,7 @@ even though it has been installed together with Android SDK/Studio
 `$ sudo apt-get install android-tools-adb`
 
 ## 4. Install noVNC
-$ sudo git clone git://github.com/kanaka/noVNC
+`$ sudo git clone git://github.com/kanaka/noVNC`
 
 ## 5: Git Clone NODE source code
 `$ git clone https://github.com/tianhongbo/controller.git`
@@ -74,6 +74,7 @@ $ sudo vi /etc/environment
 
 Here is one sample
 ```
+$ cat /etc/environment
 export ANDROID_SDK_HOME="/usr/local/android-sdk-linux"
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools"
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
