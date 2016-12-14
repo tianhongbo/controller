@@ -50,9 +50,17 @@ $ git clone https://github.com/tianhongbo/controller.git
 ## 2. Build go executable file
 $ cd /home/ubuntu/controller/src/github.com/tianhongbo/node
 
+get dependency packages
+$ go get
 
-- deviceinstall.sh
-- repo.go
+build bin file
+$ go install
+
+check the bin file
+$ ls -l ~/controller/bin
+total 8640
+-rwxrwxr-x 1 ubuntu ubuntu 8846224 Dec 14 19:15 node
+
 
 ## 2. Set environment variables
 $ sudo vi /etc/environment
