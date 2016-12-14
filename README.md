@@ -25,11 +25,11 @@ https://developer.android.com/studio/command-line/sdkmanager.html
 
 ## 2. Install GO
 In the EC2, AWS has already installed go, so nothing to do here.
-
+```
 $ go version
 
 go version go1.6.2 linux/amd64
-
+```
 
 ## 3. Install adb
 even though it has been installed together with Android SDK/Studio
@@ -51,13 +51,13 @@ $ sudo git clone git://github.com/kanaka/noVNC
 `$ cd /home/ubuntu/controller/src/github.com/tianhongbo/node`
 
 get dependency packages
-```
-$ go get
-```
+
+`$ go get`
+
 build bin file
-```
-$ go install
-```
+
+`$ go install`
+
 check the bin file
 ```
 $ ls -l ~/controller/bin
@@ -87,20 +87,20 @@ export GOPATH="/home/ubuntu/controller"
 
 For example(for ubuntu):
 ### This is for eth0
-- sysctl -w net.ipv4.conf.eth0.route_localnet=1
-- iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
+`sysctl -w net.ipv4.conf.eth0.route_localnet=1`
+`iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921`
 
 ### This is for wlan
-- sysctl -w net.ipv4.conf.wlan0.route_localnet=1
-- iptables -t nat -I PREROUTING -p tcp -i wlan0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
+`sysctl -w net.ipv4.conf.wlan0.route_localnet=1`
+`iptables -t nat -I PREROUTING -p tcp -i wlan0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921`
 
 # How can I debug?
 ## 1. check adb forward
-- $ adb forward --list
+`$ adb forward --list`
 
 
 ## 2. check iptables NAT
-- $ sudo iptables -t nat -L -n -v
+`$ sudo iptables -t nat -L -n -v`
 
 ## 3. SSH
 on the mobile phone
