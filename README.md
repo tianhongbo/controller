@@ -20,6 +20,27 @@ https://developer.android.com/studio/command-line/sdkmanager.html
 # How can I install it?
 ## 1. Install Android SDK
 - install Java SDK (java-8-openjdk-amd64)
+
+`$ sudo apt-update`
+
+/* check whether java is installed or not */
+`$ java -version`
+
+/* Install java sdk */
+`$ sudo apt-get install default-jdk`
+
+/* check java path*/
+```
+$ sudo update-alternatives --config java
+There is only one alternative in link group java (providing /usr/bin/java): /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+Nothing to configure
+```
+/* set JAVA_HOME */
+```
+$ sudo vi /etc/environment
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+```
+
 - install Android SDK Tool (25.2.3)
 - install Android 2.3.3(API 10)
 
