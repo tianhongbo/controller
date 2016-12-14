@@ -1,5 +1,5 @@
 # controller
-This is a controller written by Go to create, delete a Android emulator based Android SDK on Mac OS, Linux Desktop, or Linux Server.
+tThis is a controller written by Go to create, delete a Android emulator based Android SDK on Mac OS, Linux Desktop, or Linux Server.
 
 # setup
 AWS EC2: free tier (t2.micro)
