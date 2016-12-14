@@ -1,10 +1,14 @@
 # controller
-This is a controller written by Go to create, delete a Android emulator based Android SDK.
+This is a controller written by Go to create, delete a Android emulator based Android SDK on Mac OS, Linux Desktop, or Linux Server.
+
+# setup
+AWS EC2: free tier (t2.micro)
+Linux Ubuntu: Linux ip-172-31-16-251 4.4.0-53-generic #74-Ubuntu SMP Fri Dec 2 15:59:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
 # How can I install it?
 ## 1. Install Android SDK
-- install Java SDK
-- install Android Studio
+- install Java SDK (java-8-openjdk-amd64)
+- install Android SDK Tool (25.2.3)
 - install Android 2.3.3(API 10)
 
 ## 2. Install GO
