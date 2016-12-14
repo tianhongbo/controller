@@ -154,11 +154,7 @@ $ go version
 go version go1.6.2 linux/amd64
 ```
 
-## 3. Install adb
-even though it has been installed together with Android SDK/Studio
-`$ sudo apt-get install android-tools-adb`
-
-## 4. Install noVNC
+## 3. Install noVNC (optional)
 `$ sudo git clone git://github.com/kanaka/noVNC`
 
 ## 5: Git Clone NODE source code
