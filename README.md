@@ -97,8 +97,10 @@ $ ./sdkmanager --list
 `$ ./sdkmanager "platforms;android-10"`
 
 Create AVD
+In this case, we create 10 AVD for 10 emulator.
+
 ```
-$ android -s create avd -n android-api-10-5555 -t android-10 --abi default/armeabi
+$ android -s create avd -n android-api-10-5556 -t android-10 --abi default/armeabi
 Android 2.3.3 is a basic Android platform.
 Do you wish to create a custom hardware profile [no]no
 Created AVD 'android-api-10-5555' based on Android 2.3.3, ARM (armeabi) processor,
@@ -106,6 +108,26 @@ with the following hardware config:
 hw.lcd.density=240
 hw.ramSize=256
 vm.heapSize=24
+```
+
+Delete AVD
+```
+$ android -s delete avd -n android-api-10-5555
+Deleting file /home/ubuntu/.android/avd/android-api-10-5555.ini
+Deleting folder /home/ubuntu/.android/avd/android-api-10-5555.avd
+
+AVD 'android-api-10-5555' deleted.
+```
+
+List AVD
+```
+$ android -s list avd
+Available Android Virtual Devices:
+    Name: android-api-10-5555
+    Path: /home/ubuntu/.android/avd/android-api-10-5555.avd
+  Target: Android 2.3.3 (API level 10)
+ Tag/ABI: default/armeabi
+    Skin: WVGA800
 ```
 
 /*
@@ -131,7 +153,7 @@ $ echo $LD_LIBRARY_PATH
  * create emulator
  */
 ```
-$ emulator64-arm -avd android-api-10-5555 -wipe-data -no-window -no-boot-anim -noskin -port 5556
+$ emulator64-arm -avd android-api-10-5554 -wipe-data -no-window -no-boot-anim -noskin -port 5554
 emulator: WARNING: the -no-skin flag is obsolete. to have a non-skinned virtual device, create one through the AVD manager
 emulator: WARNING: Classic qemu does not support SMP. The hw.cpu.ncore option from your config file is ignored.
 emulator: warning: opening audio output failed
