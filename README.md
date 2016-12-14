@@ -5,6 +5,17 @@ This is a controller written by Go to create, delete a Android emulator based An
 AWS EC2: free tier (t2.micro)
 Linux Ubuntu: Linux ip-172-31-16-251 4.4.0-53-generic #74-Ubuntu SMP Fri Dec 2 15:59:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
+# Must read before starting
+This doc instructs how to install the controller on a Ubuntu Server.
+The big chanllenge in this installation is the Android SDK part since it is usually installed in a machine with graphic device via GUI. But in this case, all the installation need to be done via command line becasue a server does not provide GUI interface.
+
+Follow this post to install Android SDK on headleass Ubuntu server
+http://sblackwell.com/blog/2014/06/installing-the-android-sdk-on-a-headless-server/
+
+The sdkmanager is a command line tool that allows you to view, install, update, and uninstall packages for the Android SDK. If you're using Android Studio, then you do not need to use this tool and you can instead manage your SDK packages from the IDE.
+
+https://developer.android.com/studio/command-line/sdkmanager.html
+
 # How can I install it?
 ## 1. Install Android SDK
 - install Java SDK (java-8-openjdk-amd64)
@@ -20,7 +31,7 @@ even though it has been installed together with Android SDK/Studio
 ## 4. Install noVNC
 $ sudo git clone git://github.com/kanaka/noVNC
 
-## Step 5: Git Clone NODE source code
+## 5: Git Clone NODE source code
 $ git clone https://github.com/tianhongbo/controller.git
 
 # How can I configure it?
