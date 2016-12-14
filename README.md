@@ -47,6 +47,13 @@ $ git clone https://github.com/tianhongbo/controller.git
 - deviceinstall.sh
 - repo.go
 
+## 2. Build go executable file
+$ cd /home/ubuntu/controller/src/github.com/tianhongbo/node
+
+
+- deviceinstall.sh
+- repo.go
+
 ## 2. Set environment variables
 $ sudo vi /etc/environment
 
