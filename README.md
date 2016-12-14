@@ -19,7 +19,7 @@ https://developer.android.com/studio/command-line/sdkmanager.html
 
 # How can I install it?
 ## 1. Install Android SDK
-### install Java SDK (java-8-openjdk-amd64)
+### Install Java SDK (java-8-openjdk-amd64)
 
 `$ sudo apt-update`
 
@@ -43,7 +43,7 @@ $ sudo vi /etc/environment
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 ```
 
-- install Android SDK Tool (25.2.3)
+### Install Android SDK Tool (25.2.3)
 
 /* install Android SDK tool */
 ```
@@ -69,7 +69,7 @@ $ sudo vi /etc/environment
 "/usr/local/games:/usr/local/android-sdk-linux/tools:/usr/local/android-sdk-linux/platform-tools"
 ```
 
-- install Android 2.3.3(API 10)
+### Install Android 2.3.3(API 10)
 
 /*
  * install SDK packages via /tools/bin/sdkmanager
@@ -96,9 +96,7 @@ $ ./sdkmanager --list
 
 `$ ./sdkmanager "platforms;android-10"`
 
-/*
- * create AVD
- */
+Create AVD
 ```
 $ android -s create avd -n android-api-10-5555 -t android-10 --abi default/armeabi
 Android 2.3.3 is a basic Android platform.
