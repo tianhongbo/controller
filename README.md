@@ -198,11 +198,10 @@ $ sudo vi /etc/environment
 Here is one sample
 ```
 $ cat /etc/environment
-export ANDROID_SDK_HOME="/usr/local/android-sdk-linux"
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/android-sdk-linux/tools:/usr/local/android-sdk-linux/platform-tools"
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export LD_LIBRARY_PATH="$ANDROID_SDK_HOME/tools/lib64:$ANDROID_SDK_HOME/tools/lib64/qt/lib:$LD_LIBRARY_PATH"
-export GOPATH="/home/ubuntu/controller"
+LD_LIBRARY_PATH="/usr/local/android-sdk-linux/tools/lib64:/usr/local/android-sdk-linux/tools/lib64/qt/lib"
+GOPATH="/home/ubuntu/controller"
 ```
 
 ## 3. configure port forwarding for SSH functions
