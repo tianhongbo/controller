@@ -39,7 +39,7 @@ even though it has been installed together with Android SDK/Studio
 $ sudo git clone git://github.com/kanaka/noVNC
 
 ## 5: Git Clone NODE source code
-$ git clone https://github.com/tianhongbo/controller.git
+`$ git clone https://github.com/tianhongbo/controller.git`
 
 # How can I configure it?
 ## 1. Modify source code
@@ -48,19 +48,22 @@ $ git clone https://github.com/tianhongbo/controller.git
 - repo.go
 
 ## 2. Build go executable file
-$ cd /home/ubuntu/controller/src/github.com/tianhongbo/node
+`$ cd /home/ubuntu/controller/src/github.com/tianhongbo/node`
 
 get dependency packages
+```
 $ go get
-
+```
 build bin file
+```
 $ go install
-
+```
 check the bin file
+```
 $ ls -l ~/controller/bin
 total 8640
 -rwxrwxr-x 1 ubuntu ubuntu 8846224 Dec 14 19:15 node
-
+```
 
 ## 2. Set environment variables
 $ sudo vi /etc/environment
