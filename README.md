@@ -3,6 +3,7 @@ This is a controller written by Go to create, delete a Android emulator based An
 
 # setup
 AWS EC2: free tier (t2.micro)
+
 Linux Ubuntu: Linux ip-172-31-16-251 4.4.0-53-generic #74-Ubuntu SMP Fri Dec 2 15:59:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 
 # Must read before starting
