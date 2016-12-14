@@ -24,6 +24,12 @@ https://developer.android.com/studio/command-line/sdkmanager.html
 - install Android 2.3.3(API 10)
 
 ## 2. Install GO
+In the EC2, AWS has already installed go, so nothing to do here.
+
+$ go version
+
+go version go1.6.2 linux/amd64
+
 
 ## 3. Install adb
 even though it has been installed together with Android SDK/Studio
