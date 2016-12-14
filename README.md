@@ -66,10 +66,17 @@ total 8640
 $ sudo vi /etc/environment
 
 - add emulator tools to PATH
-/home/ubuntu2/Android/Sdk/tools
-
+- add dynamic lib path for Android SDK
 - add GOPATH
-GOPATH=/home/ubuntu2/controller
+
+Here is one sample
+
+export ANDROID_SDK_HOME="/usr/local/android-sdk-linux"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools"
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export LD_LIBRARY_PATH="$ANDROID_SDK_HOME/tools/lib64:$ANDROID_SDK_HOME/tools/lib64/qt/lib:$LD_LIBRARY_PATH"
+export GOPATH="/home/ubuntu/controller"
+
 
 ## 3. configure port forwarding for SSH functions
 - iptables for Ubuntu
