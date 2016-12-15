@@ -97,7 +97,12 @@ $ ./sdkmanager --list
 `$ ./sdkmanager "platforms;android-10"`
 
 Create AVD
-In this case, we create 10 AVD for 10 emulator.
+In this case, we create 10 AVD for 10 emulator. 
+
+The AVD is stored at this user's home directory, like '/home/ubuntu/.android/avd/android-api-10-5555.avd'. It's very important to notice that creating emulator will automatically find .avd file to the user's home directory. If the avd is created by different user, it will failed with the following error when creating emulator.
+```
+emulator: ERROR: unknown virtual device name: 'android-api-10-5558'
+```
 
 ```
 $ android -s create avd -n android-api-10-5556 -t android-10 --abi default/armeabi
