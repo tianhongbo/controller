@@ -1,42 +1,15 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"log"
 	//"strings"
 	//"bytes"
 	//"os/exec"
-	//"strconv"
-	"errors"
+	"strconv"
 	"time"
 )
-
-
-// Initiate the repository data
-func init() {
-	//intialize free VNC port pool
-	for i := VNC_MIN_PORT; i <= VNC_MAX_PORT; i++ {
-		freeVNCPortPool = append(freeVNCPortPool,i)
-	}
-	//intialize free SSH port pool
-	for i := SSH_MIN_PORT; i <= SSH_MAX_PORT; i++ {
-		freeSSHPortPool = append(freeSSHPortPool,i)
-	}
-	//intialize free emulator port pool
-	for i := EMULATOR_MIN_PORT; i <= EMULATOR_MAX_PORT; i = i+2 {
-		freeEmulatorPortPool = append(freeEmulatorPortPool,i)
-	}
-
-	//intialize devices list
-	RepoCreateDevice(Device{IMEI:"357288042352104", Status:"available", ADBName:"4e640638", IP:"10.189.146.231", ConnectedHostname: THIS_HOST_NAME})
-	//RepoCreateDevice(Device{IMEI:"353188020902633", Status:"available", ADBName:"G1002de5a083", IP:"192.168.1.17", ConnectedHostname: THIS_HOST_NAME})
-	//RepoCreateDevice(Device{IMEI:"353188020902634", Status:"available", ADBName:"G1002de5a084", IP:"192.168.1.18", ConnectedHostname: THIS_HOST_NAME})
-
-
-	//fmt.Println(inventories)
-	//fmt.Println(freeVNCPortPool)
-	//fmt.Println(freeSSHPortPool)
-	//fmt.Println(freeEmulatorPortPool)
-}
 
 const THIS_HOST_NAME = "host101"
 const EMULATOR_MIN_PORT = 5554
@@ -69,6 +42,81 @@ const INSTALL_DATA_PATH  = "/home/ubuntu2/controller/src/github.com/tianhongbo/n
 
 //VNC available port pool#
 var freeVNCPortPool FreeVNCPortPool
+
+
+// Initiate the repository data
+func init() {
+	//intialize free VNC port pool
+	for i := VNC_MIN_PORT; i <= VNC_MAX_PORT; i++ {
+		freeVNCPortPool = append(freeVNCPortPool,i)
+	}
+	//intialize free SSH port pool
+	for i := SSH_MIN_PORT; i <= SSH_MAX_PORT; i++ {
+		freeSSHPortPool = append(freeSSHPortPool,i)
+	}
+	//intialize free emulator port pool
+	for i := EMULATOR_MIN_PORT; i <= EMULATOR_MAX_PORT; i = i+2 {
+		freeEmulatorPortPool = append(freeEmulatorPortPool,i)
+	}
+
+	//intialize devices list
+	RepoCreateDevice(Device{IMEI:"357288042352104", Status:"available", ADBName:"4e640638", IP:"10.189.146.231", ConnectedHostname: THIS_HOST_NAME})
+	//RepoCreateDevice(Device{IMEI:"353188020902633", Status:"available", ADBName:"G1002de5a083", IP:"192.168.1.17", ConnectedHostname: THIS_HOST_NAME})
+	//RepoCreateDevice(Device{IMEI:"353188020902634", Status:"available", ADBName:"G1002de5a084", IP:"192.168.1.18", ConnectedHostname: THIS_HOST_NAME})
+
+
+	//fmt.Println(inventories)
+	//fmt.Println(freeVNCPortPool)
+	//fmt.Println(freeSSHPortPool)
+	//fmt.Println(freeEmulatorPortPool)
+}
+
+// create an emulator
+func createOneEmulator() {
+        var e Emulator
+        var err error
+	
+	err = nil
+        if _, err = RepoAllocateEmulatorPort(); err != nil {
+                log.Println("Error! Can't allocate Emulator port for create emulator request.")
+        //        return
+        }
+	
+	e.EmulatorPort = 5554
+        
+	//Assign ADB name according Android SDK naming convention "emulator-'port'". e.g. emulator-5554
+        e.ADBName = "emulator-" + strconv.Itoa(e.EmulatorPort)
+
+        //Allocate SSH port
+        if e.SSHPort, err = RepoAllocateSSHPort(); err != nil {
+                log.Println("Error! Can't allocate SSH port for create emulator request.")
+                return
+        }
+
+        //Allocate VNC port
+        if e.VNCPort, err = RepoAllocateVNCPort(); err != nil {
+                log.Println("Error! Can't allocate VNC port for create emulator request.")
+                return
+        }
+
+        e.StartTime = time.Now()        //startTime     time.Time
+        e.StopTime = time.Time{}        //stopTime      time.Time
+
+        e.ConnectedHostname = THIS_HOST_NAME
+        e.Status = "processing"
+
+
+        e.initCmd()
+        go e.startEmulator()
+        go e.startEmulatorWaitBoot()
+        go e.startInitEmulator()
+
+        RepoCreateEmulator(e)
+
+        log.Println("Emulator was created successfully. ID = ", e.Id)
+
+        return
+}
 
 func RepoAllocateVNCPort() (int, error) {
 	for i,port := range freeVNCPortPool {
