@@ -65,7 +65,7 @@ tools
 
 /* set environment */
 ```
-$ sudo vi /etc/environment
+$ sudo vi /etc/profile
 "/usr/local/games:/usr/local/android-sdk-linux/tools:/usr/local/android-sdk-linux/platform-tools"
 ```
 
@@ -145,10 +145,10 @@ Available Android Virtual Devices:
  */
 /* set environment */
 ```
-$ sudo vi /etc/environment
+$ sudo vi /etc/profile
 export LD_LIBRARY_PATH="$ANDROID_SDK_HOME/tools/lib64:$ANDROID_SDK_HOME/tools/lib64/qt/lib:$LD_LIBRARY_PATH"
 
-$ source /etc/environment
+$ source /etc/profile
 
 $ echo $LD_LIBRARY_PATH
 /usr/local/android-sdk-linux/tools/lib64:/usr/local/android-sdk-linux/tools/lib64/qt/lib:
@@ -212,7 +212,7 @@ total 8640
 ```
 
 ## 2. Set environment variables
-$ sudo vi /etc/environment
+$ sudo vi /etc/profile
 
 - add emulator tools to PATH
 - add dynamic lib path for Android SDK
@@ -220,11 +220,12 @@ $ sudo vi /etc/environment
 
 Here is one sample
 ```
-$ cat /etc/environment
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/android-sdk-linux/tools:/usr/local/android-sdk-linux/platform-tools"
-JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-LD_LIBRARY_PATH="/usr/local/android-sdk-linux/tools/lib64:/usr/local/android-sdk-linux/tools/lib64/qt/lib"
-GOPATH="/home/ubuntu/controller"
+$ cat /etc/profile
+# set environment for MTaaS
+export PATH="$PATH:/usr/local/android-sdk-linux/tools:/usr/local/android-sdk-linux/platform-tools"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/android-sdk-linux/tools/lib64:/usr/local/android-sdk-linux/tools/lib64/qt/lib"
+export GOPATH="/home/ubuntu/controller"
 ```
 
 ## 3. configure port forwarding for SSH functions
@@ -259,5 +260,29 @@ listening port on the external interface in MAC. However, it will create listeni
 the interfaces including localhost.
 
 2. /etc/rc.local
-start node automatically when instance booting
-su ubuntu - -c /home/ubuntu/node/bin/node
+```
+$ cat /etc/rc.local
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# create emulators as ubuntu because of avd file path
+su ubuntu - -c /home/ubuntu/controller/bin/create_emulators.sh
+
+# run controller as root because of port:80 permission
+/home/ubuntu/controller/bin/node &
+
+# print done message for debugging
+echo "initialization is done"
+
+exit 0
+```
