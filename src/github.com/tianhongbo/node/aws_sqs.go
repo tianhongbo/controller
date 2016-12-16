@@ -6,17 +6,23 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 
 const AWS_SQS_URL = "https://sqs.us-west-2.amazonaws.com/497100832806/MTaaS-emulator-queue"
 const AWS_SQS_ARN = "arn:aws:sqs:us-west-2:497100832806:MTaaS-emulator-queue"
+
 const AWS_CURRENT_REGION = "us-west-2"
+
 const AWS_PUBLIC_IP_URI = "http://instance-data/latest/meta-data/public-ipv4"
 const AWS_LOCAL_IP_URI = "http://instance-data/latest/meta-data/local-ipv4"
 const AWS_AVAILABILITY_ZONE_URI = "http://instance-data/latest/meta-data/placement/availability-zone"
+
+const SYS_LOG_FILE = "/home/ubuntu/controller/log/sys.log"
 
 type LocalEnv struct {
 	PublicIp	string
@@ -111,14 +117,31 @@ var emulatorsNew = []EmulatorNew {
 }
 
 func init() {
+	//initialize log at the first place
+	initLog()
+
+	log.Println("system restart...")
+
+	//initialize local env
 	localEnv.PublicIp = getVmMetaData(AWS_PUBLIC_IP_URI)
 	localEnv.LocalIp = getVmMetaData(AWS_LOCAL_IP_URI)
 	localEnv.AvailabilityZone = getVmMetaData(AWS_AVAILABILITY_ZONE_URI)
 
-	log.Println("local env is intialized.",
-		" pulic ip: ", localEnv.PublicIp,
-		" local ip: ", localEnv.LocalIp,
-		" availability zone: ", localEnv.AvailabilityZone)
+	log.Println("local env initialization is done.")
+	log.Println("pulic ip: ", localEnv.PublicIp)
+	log.Println("local ip: ", localEnv.LocalIp)
+	log.Println("availability zone: ", localEnv.AvailabilityZone)
+}
+
+func initLog() {
+	file, err := os.OpenFile(SYS_LOG_FILE, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatalln("fail to open log file with error:  ", err)
+	}
+
+	multi := io.MultiWriter(file, os.Stdout)
+	log.SetOutput(multi)
+	log.Println("log initialization is done.")
 }
 
 func getVmMetaData (uri string) string {
@@ -132,7 +155,7 @@ func getVmMetaData (uri string) string {
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Println("fail to decode public ip from response.")
+		log.Println("fail to decode public ip.")
 		return ""
 	}
 	return string(body)
@@ -149,37 +172,12 @@ func getOneEmulator() (EmulatorNew, error) {
 	return e, errors.New("no available emulators.")
 }
 
-func main() {
-
-	sess, err := session.NewSession()
-	if err != nil {
-		log.Println("failed to create session,", err)
-		return
+func hasFreeEmulator() bool {
+	for _, v := range emulatorsNew {
+		if v.Used {continue}
+		return true
 	}
-
-	svc := sqs.New(sess, &aws.Config{Region: aws.String(AWS_CURRENT_REGION)})
-
-	for {
-		// receive one message
-		req, handler, err := getOneMsg(svc)
-		if err != nil {
-			continue
-		}
-		log.Println(req.Id, handler)
-
-		// process the message
-		err = doOneMsg(req)
-		if err != nil {
-			// do not delete the message from sqs queue
-			log.Println("fail to process the request.")
-			continue
-		}
-
-		// delete the message
-		deleteOneMsg(svc, handler)
-
-		// delay for 
-	}
+	return false
 }
 
 func getOneMsg (svc *sqs.SQS) (ReqEmulatorMsg, string, error ) {
@@ -260,4 +258,40 @@ func deleteOneMsg (svc *sqs.SQS, ReceiptHandle string) {
 	// Pretty-print the response data.
 	log.Println("delete one message.")
 
+}
+
+
+func main() {
+
+	sess, err := session.NewSession()
+	if err != nil {
+		log.Println("failed to create session,", err)
+		return
+	}
+
+	svc := sqs.New(sess, &aws.Config{Region: aws.String(AWS_CURRENT_REGION)})
+
+	for hasFreeEmulator() {
+		// receive one message
+		req, handler, err := getOneMsg(svc)
+		if err != nil {
+			continue
+		}
+		log.Println(req.Id, handler)
+
+		// process the message
+		err = doOneMsg(req)
+		if err != nil {
+			// do not delete the message from sqs queue
+			log.Println("fail to process the request.")
+			continue
+		}
+
+		// delete the message
+		deleteOneMsg(svc, handler)
+
+		// delay for 
+	}
+
+	log.Println("exits because all emulators are used now.")
 }

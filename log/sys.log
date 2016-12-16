@@ -1,0 +1,779 @@
+2016/12/16 14:52:46 log initialization is done.
+2016/12/16 14:52:46 local env is intialized.  pulic ip:  54.149.214.76  local ip:  172.31.16.251  availability zone:  us-west-2b
+2016/12/16 14:52:46 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+2016/12/16 14:52:46 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 14:52:46 5850e874d026670010d6b7f9 AQEB4LkhOw5rpDh4CP1btPYxKfmo0vt+a0J1AswlfzoSK764j2csrFPewBumjiNDwrVgLg7ffBu1kj2hSdvNV+OKSjW60W8BJvPbbPQKBghn4hj/gzhkKh+YkdqyuGon0wpyMNWpa0E2CubVUIuyT82sJRil+3jBANz6JsfxOHC3n/XpVpE88dwcS/lWzUSH/n+VOpl6Sw99f5DaWLOgH+JQI9RYPBcMIXI9nHwce//NDgeaxazSG3kmFcAVwAwTivRu1+9XhBNC8glLYgjXlI9EtU+RJ4K5nnauw8Lu1F354V4PZ+BkfCrJ7dHu2oMjgQcRUaL1FonMKVoFegEMxszckT5SRoLBrAcqd7gH0ew4fwt3ruG3ZGmjb8WfL2G51JTOX8nuZz6kPTRmeSzXNOLdCw==
+2016/12/16 14:52:46 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 14:52:46 delete one message.
+2016/12/16 14:52:46 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+2016/12/16 14:52:46 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 14:52:46 5850e874d026670010d6b7f9 AQEBV+kr0WWZdQOJ00CtuO/l3Jp8MBrJb/VKbEcMxDKsT2JmGks6Q9rB074g81n0CkNucCJUzOc4Yc8FUWP2qZU6rREGD9mAnPgB5D0ms39JUGLsrLjS4klNbjWKuaR6b5vaPtRoYxJo0oDbydsiiUC0AUx5aHWXy/bsFEjUmxMB7ZsjYzNZhSkLrn33/o210XM7JLZiq6RWBz0lhl/sdP+mygqlv8GM8PvQGtPm1bhWY3rPnpO9mJ5S0qUu57bkuUVhdXxYqfgU0x0aEHPgpd/d0YZT3LU9NQa4k33od5QrQFxwy2dAAWo69G7r5I3KkWAfK7xK0uMPH4XvIvbUJzkqoPSF6jgZI2RVkSFV7G4nDKtuiv+icVFiiOOTTba0e2FxxbKAu7EKqGBTqeTB2IRebA==
+2016/12/16 14:52:46 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 14:52:46 delete one message.
+2016/12/16 14:52:47 no message
+2016/12/16 14:52:48 no message
+2016/12/16 14:52:49 no message
+2016/12/16 14:52:50 no message
+2016/12/16 14:52:51 no message
+2016/12/16 14:52:52 no message
+2016/12/16 14:52:53 no message
+2016/12/16 14:52:54 no message
+2016/12/16 14:52:55 no message
+2016/12/16 14:52:56 no message
+2016/12/16 14:52:57 no message
+2016/12/16 14:52:58 no message
+2016/12/16 14:52:59 no message
+2016/12/16 14:53:00 no message
+2016/12/16 14:53:01 no message
+2016/12/16 14:53:02 no message
+2016/12/16 14:53:03 no message
+2016/12/16 14:53:04 no message
+2016/12/16 14:53:05 no message
+2016/12/16 14:53:06 no message
+2016/12/16 14:53:07 no message
+2016/12/16 14:53:08 no message
+2016/12/16 14:53:09 no message
+2016/12/16 14:53:10 no message
+2016/12/16 14:53:11 no message
+2016/12/16 14:53:12 no message
+2016/12/16 14:53:13 no message
+2016/12/16 14:53:14 no message
+2016/12/16 14:53:15 no message
+2016/12/16 14:53:16 no message
+2016/12/16 14:53:17 no message
+2016/12/16 14:53:18 no message
+2016/12/16 14:53:19 no message
+2016/12/16 14:53:20 no message
+2016/12/16 14:53:21 no message
+2016/12/16 14:53:22 no message
+2016/12/16 14:53:23 no message
+2016/12/16 14:53:24 no message
+2016/12/16 14:53:25 no message
+2016/12/16 14:53:26 no message
+2016/12/16 14:53:27 no message
+2016/12/16 14:53:28 no message
+2016/12/16 14:53:29 no message
+2016/12/16 14:53:30 no message
+2016/12/16 14:53:31 no message
+2016/12/16 14:53:32 no message
+2016/12/16 14:53:33 no message
+2016/12/16 14:53:34 no message
+2016/12/16 14:53:35 no message
+2016/12/16 14:53:36 no message
+2016/12/16 14:53:37 no message
+2016/12/16 14:53:38 no message
+2016/12/16 14:53:39 no message
+2016/12/16 14:53:40 no message
+2016/12/16 14:53:41 no message
+2016/12/16 14:53:42 no message
+2016/12/16 14:53:43 no message
+2016/12/16 14:53:44 no message
+2016/12/16 14:53:45 no message
+2016/12/16 14:53:46 no message
+2016/12/16 14:53:47 no message
+2016/12/16 14:53:48 no message
+2016/12/16 14:53:49 no message
+2016/12/16 14:53:50 no message
+2016/12/16 14:53:51 no message
+2016/12/16 14:53:52 no message
+2016/12/16 14:53:53 no message
+2016/12/16 14:53:54 no message
+2016/12/16 14:53:55 no message
+2016/12/16 14:53:56 no message
+2016/12/16 14:53:57 no message
+2016/12/16 14:53:58 no message
+2016/12/16 14:53:59 no message
+2016/12/16 14:54:00 no message
+2016/12/16 14:54:01 no message
+2016/12/16 14:54:06 log initialization is done.
+2016/12/16 14:54:06 local env is intialized.  pulic ip:  54.149.214.76  local ip:  172.31.16.251  availability zone:  us-west-2b
+2016/12/16 14:54:07 no message
+2016/12/16 14:54:08 no message
+2016/12/16 14:54:09 no message
+2016/12/16 14:54:10 no message
+2016/12/16 14:54:11 no message
+2016/12/16 14:54:12 no message
+2016/12/16 14:54:13 no message
+2016/12/16 14:54:14 no message
+2016/12/16 14:54:15 no message
+2016/12/16 14:54:16 no message
+2016/12/16 14:54:17 no message
+2016/12/16 14:54:18 no message
+2016/12/16 14:54:19 no message
+2016/12/16 14:54:20 no message
+2016/12/16 14:54:21 no message
+2016/12/16 14:54:22 no message
+2016/12/16 14:54:23 no message
+2016/12/16 14:54:24 no message
+2016/12/16 14:54:25 no message
+2016/12/16 14:54:26 no message
+2016/12/16 14:54:27 no message
+2016/12/16 14:56:18 log initialization is done.
+2016/12/16 14:56:18 local env initialization is done.
+2016/12/16 14:56:18 pulic ip:  54.149.214.76
+2016/12/16 14:56:18 local ip:  172.31.16.251
+2016/12/16 14:56:18 availability zone:  us-west-2b
+2016/12/16 14:56:19 no message
+2016/12/16 14:56:20 no message
+2016/12/16 14:56:21 no message
+2016/12/16 14:56:22 no message
+2016/12/16 14:56:23 no message
+2016/12/16 14:56:24 no message
+2016/12/16 14:56:25 no message
+2016/12/16 14:56:26 no message
+2016/12/16 14:56:27 no message
+2016/12/16 14:56:28 no message
+2016/12/16 14:56:29 no message
+2016/12/16 14:56:30 no message
+2016/12/16 14:56:31 no message
+2016/12/16 14:56:32 no message
+2016/12/16 14:56:33 no message
+2016/12/16 14:56:34 no message
+2016/12/16 14:56:35 no message
+2016/12/16 14:56:36 no message
+2016/12/16 14:56:37 no message
+2016/12/16 14:56:38 no message
+2016/12/16 14:56:39 no message
+2016/12/16 14:56:40 no message
+2016/12/16 14:56:41 no message
+2016/12/16 14:56:42 no message
+2016/12/16 14:56:43 no message
+2016/12/16 14:56:44 no message
+2016/12/16 14:56:45 no message
+2016/12/16 14:56:46 no message
+2016/12/16 14:56:47 no message
+2016/12/16 14:56:48 no message
+2016/12/16 14:56:49 no message
+2016/12/16 14:56:50 no message
+2016/12/16 14:56:51 no message
+2016/12/16 14:56:52 no message
+2016/12/16 14:56:53 no message
+2016/12/16 14:56:54 no message
+2016/12/16 15:08:20 log initialization is done.
+2016/12/16 15:08:20 system restart...
+2016/12/16 15:08:20 local env initialization is done.
+2016/12/16 15:08:20 pulic ip:  54.149.214.76
+2016/12/16 15:08:20 local ip:  172.31.16.251
+2016/12/16 15:08:20 availability zone:  us-west-2b
+2016/12/16 15:08:21 no message
+2016/12/16 15:08:22 no message
+2016/12/16 15:08:23 no message
+2016/12/16 15:08:24 no message
+2016/12/16 15:08:25 no message
+2016/12/16 15:08:26 no message
+2016/12/16 15:08:27 no message
+2016/12/16 15:08:28 no message
+2016/12/16 15:08:29 no message
+2016/12/16 15:08:30 no message
+2016/12/16 15:08:31 no message
+2016/12/16 15:08:32 no message
+2016/12/16 15:08:33 no message
+2016/12/16 15:08:34 no message
+2016/12/16 15:08:35 no message
+2016/12/16 15:08:36 no message
+2016/12/16 15:08:37 no message
+2016/12/16 15:08:38 no message
+2016/12/16 15:08:39 no message
+2016/12/16 15:08:40 no message
+2016/12/16 15:08:41 no message
+2016/12/16 15:08:42 no message
+2016/12/16 15:08:43 no message
+2016/12/16 15:08:44 no message
+2016/12/16 15:08:45 no message
+2016/12/16 15:08:46 no message
+2016/12/16 15:08:47 no message
+2016/12/16 15:08:48 no message
+2016/12/16 15:08:49 no message
+2016/12/16 15:08:50 no message
+2016/12/16 15:08:51 no message
+2016/12/16 15:08:52 no message
+2016/12/16 15:08:53 no message
+2016/12/16 15:08:54 no message
+2016/12/16 15:08:55 no message
+2016/12/16 15:08:56 no message
+2016/12/16 15:08:57 no message
+2016/12/16 15:08:58 no message
+2016/12/16 15:08:59 no message
+2016/12/16 15:09:00 no message
+2016/12/16 15:09:01 no message
+2016/12/16 15:09:02 no message
+2016/12/16 15:09:03 no message
+2016/12/16 15:09:04 no message
+2016/12/16 15:09:05 no message
+2016/12/16 15:09:06 no message
+2016/12/16 15:09:07 no message
+2016/12/16 15:09:08 no message
+2016/12/16 15:09:09 no message
+2016/12/16 15:09:10 no message
+2016/12/16 15:09:11 no message
+2016/12/16 15:09:12 no message
+2016/12/16 15:09:13 no message
+2016/12/16 15:09:14 no message
+2016/12/16 15:09:15 no message
+2016/12/16 15:09:16 no message
+2016/12/16 15:09:17 no message
+2016/12/16 15:09:18 no message
+2016/12/16 15:09:19 no message
+2016/12/16 15:09:20 no message
+2016/12/16 15:09:21 no message
+2016/12/16 15:09:22 no message
+2016/12/16 15:09:23 no message
+2016/12/16 15:09:24 no message
+2016/12/16 15:09:25 no message
+2016/12/16 15:09:26 no message
+2016/12/16 15:09:27 no message
+2016/12/16 15:09:28 no message
+2016/12/16 15:09:29 no message
+2016/12/16 15:09:30 no message
+2016/12/16 15:09:31 no message
+2016/12/16 15:09:33 no message
+2016/12/16 15:09:34 no message
+2016/12/16 15:09:35 no message
+2016/12/16 15:09:36 no message
+2016/12/16 15:09:37 no message
+2016/12/16 15:09:38 no message
+2016/12/16 15:09:39 no message
+2016/12/16 15:09:40 no message
+2016/12/16 15:09:41 no message
+2016/12/16 15:09:42 no message
+2016/12/16 15:09:43 no message
+2016/12/16 15:09:44 no message
+2016/12/16 15:09:45 no message
+2016/12/16 15:09:46 no message
+2016/12/16 15:09:47 no message
+2016/12/16 15:09:48 no message
+2016/12/16 15:09:49 no message
+2016/12/16 15:09:50 no message
+2016/12/16 15:09:51 no message
+2016/12/16 15:09:52 no message
+2016/12/16 15:09:53 no message
+2016/12/16 15:09:54 no message
+2016/12/16 15:09:55 no message
+2016/12/16 15:09:56 no message
+2016/12/16 15:09:57 no message
+2016/12/16 15:09:58 no message
+2016/12/16 15:09:59 no message
+2016/12/16 15:10:00 no message
+2016/12/16 15:10:01 no message
+2016/12/16 15:10:02 no message
+2016/12/16 15:10:03 no message
+2016/12/16 15:10:04 no message
+2016/12/16 15:10:05 no message
+2016/12/16 15:10:06 no message
+2016/12/16 15:10:07 no message
+2016/12/16 15:10:08 no message
+2016/12/16 15:10:09 no message
+2016/12/16 15:10:10 no message
+2016/12/16 15:10:11 no message
+2016/12/16 15:10:12 no message
+2016/12/16 15:10:13 no message
+2016/12/16 15:10:14 no message
+2016/12/16 15:10:15 no message
+2016/12/16 15:10:16 no message
+2016/12/16 15:10:17 no message
+2016/12/16 15:10:18 no message
+2016/12/16 15:10:19 no message
+2016/12/16 15:10:20 no message
+2016/12/16 15:10:21 no message
+2016/12/16 15:10:22 no message
+2016/12/16 15:10:23 no message
+2016/12/16 15:10:24 no message
+2016/12/16 15:10:25 no message
+2016/12/16 15:10:26 no message
+2016/12/16 15:10:27 no message
+2016/12/16 15:10:28 no message
+2016/12/16 15:10:29 no message
+2016/12/16 15:10:30 no message
+2016/12/16 15:10:31 no message
+2016/12/16 15:10:32 no message
+2016/12/16 15:10:33 no message
+2016/12/16 15:10:34 no message
+2016/12/16 15:10:35 no message
+2016/12/16 15:10:36 no message
+2016/12/16 15:10:37 no message
+2016/12/16 15:10:38 no message
+2016/12/16 15:10:39 no message
+2016/12/16 15:10:40 no message
+2016/12/16 15:10:41 no message
+2016/12/16 15:10:42 no message
+2016/12/16 15:10:43 no message
+2016/12/16 15:10:44 no message
+2016/12/16 15:10:45 no message
+2016/12/16 15:10:46 no message
+2016/12/16 15:10:47 no message
+2016/12/16 15:10:48 no message
+2016/12/16 15:10:49 no message
+2016/12/16 15:10:50 no message
+2016/12/16 15:10:51 no message
+2016/12/16 15:10:52 no message
+2016/12/16 15:10:53 no message
+2016/12/16 15:10:54 no message
+2016/12/16 15:10:55 no message
+2016/12/16 15:10:56 no message
+2016/12/16 15:10:57 no message
+2016/12/16 15:10:58 no message
+2016/12/16 15:10:59 no message
+2016/12/16 15:11:00 no message
+2016/12/16 15:11:01 no message
+2016/12/16 15:11:02 no message
+2016/12/16 15:11:03 no message
+2016/12/16 15:11:04 no message
+2016/12/16 15:11:05 no message
+2016/12/16 15:11:06 no message
+2016/12/16 15:11:07 no message
+2016/12/16 15:11:08 no message
+2016/12/16 15:11:08 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:11:08 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:11:08 5850e874d026670010d6b7f9 AQEB+xOf3wVsNaY90vtDEQ3jCDwlWpSK3NmVcojhmblJlcm1qZTJrMmiOMTfaO3YL0u+8aAi+KYiaZRH63/brxgsdPwjABr7Vsz3ON1d32W80cGCprft97nTIC+kEiQDafRonbhyFEJhs3r01aPKJMqeaERJEY6/vSz7pZzR5ohqqwquutctCvt6fjafnmsdkihLfknFNI2QyxabNAbGsKseAQBYGjXKgIfZWhWuktKmmW38A7bgK9WG9qtujq46u6uWWh7CMGA71X5Ju6QdLDQhjgP5IFa9QHUW4yrAsnOw5vEgop3ImrLfRRl5a90sxA4u3DQv5PbMEe0WR6Ahl7rW/tUz7O9gu3N4dQnGZ3ovLkKXxcHu3odYKZtvCJ/D5C14xhx3qOWgCVDOYo9tD1W6BA==
+2016/12/16 15:11:08 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 15:11:08 delete one message.
+2016/12/16 15:11:09 no message
+2016/12/16 15:11:10 no message
+2016/12/16 15:11:11 no message
+2016/12/16 15:11:12 no message
+2016/12/16 15:11:13 no message
+2016/12/16 15:11:14 no message
+2016/12/16 15:11:16 no message
+2016/12/16 15:11:17 no message
+2016/12/16 15:11:18 no message
+2016/12/16 15:11:19 no message
+2016/12/16 15:11:19 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:11:19 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:11:19 5850e874d026670010d6b7f9 AQEBEpoa/Iw1samDI+jkaYHvHmZ083LH3mGler9luNSSamTYHwiSjNl3dO8VNkHEjQDp+n65NNKlj5uWP4C2+jIHJNZ4R434rGsBi7ZAiFpPfHwfHZr+GGGOFM6UIn0I4PL1+tOEE1YVqxzqjc2Awvy4Zk8FIxjU6BZ8ZpVFfeDb1/zzJrLSLQ8OPAyV81ap1xj2bjE/LPHZsxn6ekFvJD8ubBqnoD/prEoXwwluBpyySW64ohcFiQjW6DlzjVSdG+uV5cxGTk6rIBq/gJABDsAj2Wsg/VGmROzJ0OrBws6MYwR+YouVl9y/g3SwPX1tFTRPWUQtkUgJI/YwwK5Ruz/7+NpyAD6OyYSldgKeMNrsG9qslL/CwuB1ZeBjDK4pxJMhOBCJbOUOYzxVbFQCFEx6kw==
+2016/12/16 15:11:19 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 15:11:19 delete one message.
+2016/12/16 15:11:20 no message
+2016/12/16 15:11:21 no message
+2016/12/16 15:11:22 no message
+2016/12/16 15:11:23 no message
+2016/12/16 15:11:24 no message
+2016/12/16 15:11:24 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:11:24 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:11:24 5850e874d026670010d6b7f9 AQEBbYhyAiFlhtqGA3J2eFlQz9FjlQ2F2ztberjV4w9JQ2HDdea+ifk9Efts/G2L4ebdcoldkHPpu9DhqjVI8bV3uhhlzs2rOm1AgySwfjpVV++RawNxNZhM5ve9KjSP1DGHnGLtUu4YOneIWrj46aOW/JSQSH7gZzogug+M4cbtCfSEZg1lWOvrQlFndbhiGNVxoutOd8ksYytKeeJpZ1bmsCISlZXCzmSKJ5b5fayq1ViwPEUMPQVk51SxxNSNwR07oXCLkv58BHooLGYWP1OQlv0f6vIWmga0ByTxhkDWbWiOG8J37ulhIpPq5QTlxdT80jm+q5naGcK5ItYRLHVn75Je9/yc0fOumqae3GQ2fK2eZ9KW3v2b9ii8X0+mnb7YmBLVcsO7bVUZhlwiQz8nQg==
+2016/12/16 15:11:24 5850e874d026670010d6b7f9 emulator-5558
+2016/12/16 15:11:24 delete one message.
+2016/12/16 15:11:24 exits because all emulators are used now.
+2016/12/16 15:11:35 log initialization is done.
+2016/12/16 15:11:35 system restart...
+2016/12/16 15:11:35 local env initialization is done.
+2016/12/16 15:11:35 pulic ip:  54.149.214.76
+2016/12/16 15:11:35 local ip:  172.31.16.251
+2016/12/16 15:11:35 availability zone:  us-west-2b
+2016/12/16 15:11:36 no message
+2016/12/16 15:11:37 no message
+2016/12/16 15:11:38 no message
+2016/12/16 15:11:39 no message
+2016/12/16 15:11:40 no message
+2016/12/16 15:11:41 no message
+2016/12/16 15:11:42 no message
+2016/12/16 15:11:43 no message
+2016/12/16 15:11:45 no message
+2016/12/16 15:11:46 no message
+2016/12/16 15:11:46 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:11:46 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:11:46 5850e874d026670010d6b7f9 AQEBeExHB/ra1jbDupPsXQxfEdJC8jy8ualwsHbG3CwTZGvPGeelH8d0F4W0gnli3Pvdgwq0Yoi38Cie+lu0ooh7jEjsTdmzJdGSbpRmXPY09BOHaPw5siSIPgq6QYJla5dz5B23T4YQ8BK+9OBIjakdGMsPl1cGC29pcWK2dkTvWkL1Gs4XsNbp+L4OyM+SnlWLejXf9BxEMP1IiFpf61J0gj6TUgVlGIBjP99x1CsmBkrix9dmDcYuSOYjnwvsRUvcOZ7vX/gZ14FxdQOHqUszMuT2XF7EPG3VwrUkr3Dz+d9LnXS4ofTN+HX1W/uNwcr03Y/X8/K9H3qRpIUdLwM4yKfiKEsbkMsModrzi807XzKKFNR0j07RNrC4cKLAsianXitonGKdBcMtnsMWt3WmOg==
+2016/12/16 15:11:46 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 15:11:46 delete one message.
+2016/12/16 15:11:47 no message
+2016/12/16 15:11:48 no message
+2016/12/16 15:11:49 no message
+2016/12/16 15:11:50 no message
+2016/12/16 15:11:51 no message
+2016/12/16 15:11:51 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:11:51 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:11:51 5850e874d026670010d6b7f9 AQEBbbC8ZgW+ZQb8AEfkVUJb9OxlZ3GA0MQzewh8q/Ez60tb71MPKPlEc/1QiHL39ksiYKERuMwLkyJrprGMmrzWLwhU0rzWhgJkIoffhKzZ3iT0k+3dfBxKJYKFwmrEift5s3yZrQLHplhqH5kP1SOzAOmWVyR3C4c+wRcf87wFe+uG85rhtrswj8CXFYPaYb5erVqvpFGYRxgM9okIH3uIwhU+8K3rI50qBHwBYIRzwS/XiWLDrakzx5LGSHyzC37kIWVX5zVKNcr+EEbxduw5LEqKrNjA5KcORg0NGabVeY53qgz6m76Pnvh8P2f3GAXow5Lst1EuT4PbXnqE867Np2D0tOsUSPObwMk0Sz8V9lp3hAKI1XL9xdyMO+puhSRlpsjAg5a7xZsiydZVrKxPVw==
+2016/12/16 15:11:51 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 15:11:51 delete one message.
+2016/12/16 15:11:52 no message
+2016/12/16 15:11:53 no message
+2016/12/16 15:11:53 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:11:53 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:11:53 5850e874d026670010d6b7f9 AQEB2w2cfHDBlMQ4joT7yxYyWCoShh2AqKLAMWQGbdm52gAwaeb2DK0pqrVf6X8EDzPiNflt/94SPiL4YlMUmfgmo+EbZpkz8+aL31ZGCFheaLn4QCOEDxroo3aIEys0pOpi57pOza+ONKQ6NjFfRd4wb0pZCieL099mpnP20cCet3jDZZGpZqC+oNjZVdPnmhiQf2bwMgM8ZwW4I+NxI0mHWDKQYXbWoChHZ1aaXTNJOH4CPGza/wCjUDKOEet+Gebd6iaemglCveRWqsKWnwyMNlRL4gArKR66jWo8louJbfntoNuZttgr5IWK6HA6x/z960QgzdPmcx7erp8fbbFCl+taOP7dXjkPqVx/9rsUsO0fzk/WiAdWv2BP5Kpxj7jphUbNWdNTIfd1LqiyDD44mQ==
+2016/12/16 15:11:53 5850e874d026670010d6b7f9 emulator-5558
+2016/12/16 15:11:53 delete one message.
+2016/12/16 15:11:53 exits because all emulators are used now.
+2016/12/16 15:20:12 log initialization is done.
+2016/12/16 15:20:12 system restart...
+2016/12/16 15:20:12 local env initialization is done.
+2016/12/16 15:20:12 pulic ip:  54.149.214.76
+2016/12/16 15:20:12 local ip:  172.31.16.251
+2016/12/16 15:20:12 availability zone:  us-west-2b
+2016/12/16 15:20:13 no message
+2016/12/16 15:20:14 no message
+2016/12/16 15:20:15 no message
+2016/12/16 15:20:16 no message
+2016/12/16 15:20:17 no message
+2016/12/16 15:20:18 no message
+2016/12/16 15:20:19 no message
+2016/12/16 15:20:20 no message
+2016/12/16 15:20:21 no message
+2016/12/16 15:20:22 no message
+2016/12/16 15:20:23 no message
+2016/12/16 15:20:24 no message
+2016/12/16 15:20:25 no message
+2016/12/16 15:20:26 no message
+2016/12/16 15:20:27 no message
+2016/12/16 15:20:28 no message
+2016/12/16 15:20:29 no message
+2016/12/16 15:20:30 no message
+2016/12/16 15:20:31 no message
+2016/12/16 15:20:32 no message
+2016/12/16 15:20:33 no message
+2016/12/16 15:20:34 no message
+2016/12/16 15:20:35 no message
+2016/12/16 15:20:36 no message
+2016/12/16 15:20:37 no message
+2016/12/16 15:20:38 no message
+2016/12/16 15:20:39 no message
+2016/12/16 15:20:40 no message
+2016/12/16 15:20:41 no message
+2016/12/16 15:20:42 no message
+2016/12/16 15:20:43 no message
+2016/12/16 15:20:44 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:20:44 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:20:44 5850e874d026670010d6b7f9 AQEBIWBbj+6j3wVgeOXd9EokJ6SEjqC7sBPRWdmfRSq7cef3LEAPzwlKZjC7O2OreyA9CWDfnpupOTHabAg2q8JMV7JhG3Rd3NKEARbS+3fjWnrZdG30qxF3hJHghBHzdKLFJAeg3+3M2jHWRCaHLApZE7Z9ZTZkbwbTNO7GGuMa3Z6WjPx/isYldkREUexLJ6IyfW3Svx7lqK4ML16738bSRshqQjrRc0ZFRHLBE56oYWaIFpGorOZRG5oig5KWodmu6QqyB88kXeW4BARceaHVLwqh8o3PR+KDKdwYdgDDA3C+jOSiVZwr9jK0W1Xkeh5ZonTuwjWP+ElWWE5lKSwzYEP1biQXjUz9eOmI/IrHeHsj2zjtoAzpK1Ry1tv0qLoN65J3btaeZ4Kg1652MhTjrw==
+2016/12/16 15:20:44 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 15:20:44 delete one message.
+2016/12/16 15:20:45 no message
+2016/12/16 15:20:46 no message
+2016/12/16 15:20:47 no message
+2016/12/16 15:20:48 no message
+2016/12/16 15:20:49 no message
+2016/12/16 15:20:50 no message
+2016/12/16 15:20:50 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:20:50 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:20:50 5850e874d026670010d6b7f9 AQEBRqhNs61eoiz2IkILtBjIGqhuEEza6WlbfpG6rWr9yc/jIDs1PGQYqb2+0gu/3+G5VJ0BS244Huu5UzF0JmC95X5yb9hzIZAnkZ56cwKMG44R+WheSTPATg/KCBGgvnO9owxExpmz5aZa2PbCwil+TPLat2vNWx+YqOjM80uKP/PnBWcOrwGSUCQzgeZT1bSEgpkxiZQDE7KzKhGJiWRvh9uGs92DYCm2+7NTz8BFHnN2L/fOwwlLk7uq1ekj1KY2q/ckOYxUqa7mMp5RwSQsyl6h71X3pnLzFawgEPzqqrYIKtKT2KkrBxBDvI2eAh1U92HW0cnCBWa3g+qJ2OHGImeQb9BDo/uBecOOWAoI4VnHQyJMaD3V62ADdn3EM+WXIBkm2qTVa4KijEqZ1lMQsg==
+2016/12/16 15:20:50 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 15:20:50 delete one message.
+2016/12/16 15:20:51 no message
+2016/12/16 15:20:52 no message
+2016/12/16 15:20:53 no message
+2016/12/16 15:20:54 no message
+2016/12/16 15:20:55 no message
+2016/12/16 15:20:56 no message
+2016/12/16 15:20:57 no message
+2016/12/16 15:20:58 no message
+2016/12/16 15:20:59 no message
+2016/12/16 15:20:59 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:20:59 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:20:59 5850e874d026670010d6b7f9 AQEB6fmn/dSx+bAkuT78yjFDxgqf0iUoQ9UGJHzVDFvGS/ooG7Wflcu2INV32Ds/cs73BRH5i2VrE/9DyHzmFfep2m+wHN3TTJIxZxWRVHlG3g74mc470ap4uXQa2Z2Nh0OJhrmBGVdVH+pjHVcgx6TVKhnvETfJZI3kDFLSPGW6J516olvmYI6snFW9XzAEyTWRB7Ft9Ej91+EMWHHw1yYlcZX8nEqwrHvJnrGqIIuiUdYqBeVGht0I93u8vVtXhEE8UZ2LcSLc/wlVo5wUIvNX9fCRjMknAZlj7CvEmkpO79YEJfc8L5Oa/j3BOExw6AVEv01qXTMgjnq6ukQyib/fb1WiXBWHPoHNXDK5TpqWfo+FVA9UUXzhdxUCzDTnSHJnpQBtYsBQn5Y87SNkLMJIJw==
+2016/12/16 15:20:59 5850e874d026670010d6b7f9 emulator-5558
+2016/12/16 15:20:59 delete one message.
+2016/12/16 15:20:59 exits because all emulators are used now.
+2016/12/16 15:25:28 log initialization is done.
+2016/12/16 15:25:28 system restart...
+2016/12/16 15:25:29 local env initialization is done.
+2016/12/16 15:25:29 pulic ip:  54.149.214.76
+2016/12/16 15:25:29 local ip:  172.31.16.251
+2016/12/16 15:25:29 availability zone:  us-west-2b
+2016/12/16 15:25:30 no message
+2016/12/16 15:25:31 no message
+2016/12/16 15:25:32 no message
+2016/12/16 15:25:33 no message
+2016/12/16 15:25:34 no message
+2016/12/16 15:25:35 no message
+2016/12/16 15:25:36 no message
+2016/12/16 15:25:37 no message
+2016/12/16 15:25:38 no message
+2016/12/16 15:25:39 no message
+2016/12/16 15:25:40 no message
+2016/12/16 15:25:40 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:25:40 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:25:40 5850e874d026670010d6b7f9 AQEBd+eCwxCNFEY3d+s9c508b6z+FqfYPy/vKlOgE5DfHx38GWpRlfu1B8NbHfMNYenzSHAU0r0Aa5U9Hx9MoWAcizst1HBVLfX/DZFQV6qxRlJ5Dx2i7vC9qz2QM+EU3h0oRG4PSac3IooWkQ/SkTzAuI8z560D+97mVYcZG2mtgS46zcBMv5qgBkeUUj6dBJLZUdJtDa9qMbU2JYQXPkKoc7MbuUbrm0o4JLSF+r0W0OfZM5ZPMhfFcCWNiSaro+HcliVvuwBXiYmtKyUvK1+osm9doquqvO6Kcwob9MOdE+tTAlc0Polj/FaO4+pXZ3OtsgKsnbhf4ftDBQIjX9jOkgpPD9j/gbY0PuHl+KKW7KWJuuGjeqwIiY1W6nqUs9eRMf1Z/gHBXWiJAZlYSeT6Lw==
+2016/12/16 15:25:40 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 15:25:40 delete one message.
+2016/12/16 15:25:41 no message
+2016/12/16 15:25:42 no message
+2016/12/16 15:25:43 no message
+2016/12/16 15:25:44 no message
+2016/12/16 15:25:45 no message
+2016/12/16 15:25:46 no message
+2016/12/16 15:25:47 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:25:47 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:25:47 5850e874d026670010d6b7f9 AQEBmRv2EsSPLsgl2NdDjdx/LYIOZ3EMc3N0agIEKA15t595brdOSOJXbM1ILsXl6FKi/unxYcLHLioj43VRzsElXrELSiXHWHXwzUBMxTCisuySi8htaprvHy/BK8g7rn26+Z2mgqckKKtJ3ohWiKUMRQeILaOWyNWvnQIOe/BdiYaYN8Rm32kbgFBQLp6WZtucgU3bwvfdWNNjyzem4afQXawtYaFQEqONahWZE+o4dNZADq46q+lHzWBUGquOtZHrD5LQpdtC/TYRzSv/41qRFW+8Ud/RtBQ9FxIbNzjDbKUXinrjMG9CV+4BMPN0jL4K0gU+MsLhZEWu9di6iLwfujhQa/ozsNYNx9EYACHu968GVxln1T5Sq0ssqjhuj0+s/mepQrL5gHwW7itcKhw3IQ==
+2016/12/16 15:25:47 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 15:25:47 delete one message.
+2016/12/16 15:25:48 no message
+2016/12/16 15:25:49 no message
+2016/12/16 15:25:50 no message
+2016/12/16 15:25:51 no message
+2016/12/16 15:25:52 no message
+2016/12/16 15:25:53 no message
+2016/12/16 15:25:54 no message
+2016/12/16 15:25:55 no message
+2016/12/16 15:25:56 no message
+2016/12/16 15:25:57 no message
+2016/12/16 15:25:58 no message
+2016/12/16 15:25:59 no message
+2016/12/16 15:26:00 no message
+2016/12/16 15:26:01 no message
+2016/12/16 15:26:02 no message
+2016/12/16 15:26:03 no message
+2016/12/16 15:26:04 no message
+2016/12/16 15:26:05 no message
+2016/12/16 15:26:06 no message
+2016/12/16 15:26:07 no message
+2016/12/16 15:26:08 no message
+2016/12/16 15:26:09 no message
+2016/12/16 15:26:10 no message
+2016/12/16 15:26:11 no message
+2016/12/16 15:26:12 no message
+2016/12/16 15:26:13 no message
+2016/12/16 15:31:20 log initialization is done.
+2016/12/16 15:31:20 system restart...
+2016/12/16 15:31:20 local env initialization is done.
+2016/12/16 15:31:20 pulic ip:  54.149.214.76
+2016/12/16 15:31:20 local ip:  172.31.16.251
+2016/12/16 15:31:20 availability zone:  us-west-2b
+2016/12/16 15:31:21 no message
+2016/12/16 15:31:22 no message
+2016/12/16 15:31:23 no message
+2016/12/16 15:31:24 no message
+2016/12/16 15:31:25 no message
+2016/12/16 15:31:26 no message
+2016/12/16 15:31:27 no message
+2016/12/16 15:31:28 no message
+2016/12/16 15:31:29 no message
+2016/12/16 15:31:30 no message
+2016/12/16 15:31:31 no message
+2016/12/16 15:31:33 no message
+2016/12/16 15:31:34 no message
+2016/12/16 15:31:35 no message
+2016/12/16 15:31:36 no message
+2016/12/16 15:31:37 no message
+2016/12/16 15:31:38 no message
+2016/12/16 15:31:39 no message
+2016/12/16 15:31:40 no message
+2016/12/16 15:31:41 no message
+2016/12/16 15:31:42 no message
+2016/12/16 15:31:43 no message
+2016/12/16 15:31:44 no message
+2016/12/16 15:31:45 no message
+2016/12/16 15:31:46 no message
+2016/12/16 15:31:47 no message
+2016/12/16 15:31:49 no message
+2016/12/16 15:31:50 no message
+2016/12/16 15:31:51 no message
+2016/12/16 15:31:52 no message
+2016/12/16 15:31:53 no message
+2016/12/16 15:31:54 no message
+2016/12/16 15:31:55 no message
+2016/12/16 15:31:56 no message
+2016/12/16 15:31:57 no message
+2016/12/16 15:31:58 no message
+2016/12/16 15:31:59 no message
+2016/12/16 15:32:00 no message
+2016/12/16 15:32:01 no message
+2016/12/16 15:32:02 no message
+2016/12/16 15:32:03 no message
+2016/12/16 15:32:04 no message
+2016/12/16 15:32:05 no message
+2016/12/16 15:32:06 no message
+2016/12/16 15:32:07 no message
+2016/12/16 15:32:08 no message
+2016/12/16 15:32:09 no message
+2016/12/16 15:32:10 no message
+2016/12/16 15:32:11 no message
+2016/12/16 15:32:11 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:32:11 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:32:11 5850e874d026670010d6b7f9 AQEBmPX78TQ0N1VQVlZeQJtcptWRa0Tf3H5GBHChiJScvMDViiave1QjdRCdKguj02n41UQSbtdglrIAEhDWS+C2YiK6BxLXPlrHH0JniCSyomRcCatrCzD5C/cFvkYabgQzUC0zzhj4tfqEEOInM1XlUEqGzPRzhORlqk3jDFWeiZKNPRYrUXIjciXB30Z+QvS/pSWV2NcNos6ecCQJZfKvutUXa98ysGFPLe0X0LFNYUlqDlo3ZLNI4tCjfPQe48Lq/3sO9jrNd6SHhr3n2NERZd+xQG83fcCsanhsgmdzrxWwKTiaBWApTz3Vusn5pqZblnUOpU0hM8CcKNR8kKCtjwO4rTpMDnH1Z9jQqF1aigsSY42XbiaTmfcovS9fjUuFD5hrKzLk4vdY5gWQZL5Lwg==
+2016/12/16 15:32:11 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 15:32:11 delete one message.
+2016/12/16 15:32:12 no message
+2016/12/16 15:32:13 no message
+2016/12/16 15:32:14 no message
+2016/12/16 15:32:15 no message
+2016/12/16 15:32:16 no message
+2016/12/16 15:32:17 no message
+2016/12/16 15:32:18 no message
+2016/12/16 15:32:19 no message
+2016/12/16 15:32:20 no message
+2016/12/16 15:32:21 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:32:21 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:32:21 5850e874d026670010d6b7f9 AQEBYrDH28AazUQbjEyH/mSWW3snS461q5LzIKtM+FdNV2ZaVBbQxniCihFmfiOxTUKjIoqjUVIhlA88meJ/sx7vCrky5ZyTmrB/69dxgjBloQI8N/tQXSNmWC4IY9qPhptBz/QF110HH+E9Te9nWbQuaYhvNBtGP644V/T0bX4ywuspDfQpEDG01veMJL54q2nc7gwFL0kHt+jTGuF6SrLdGmuFu39zVIyneKHEHAfs47jJ/MPn3hAtZoCEArM+Wkav73LLqVoiBmaYCcxebhkEFuE5+gxBbhVtW8RgondLT//LeR5RRD88K8YqylX187s7omnfI0HuWaKTBnzOQt9LQgHDrD8htS/ZxvBT3QBMpQDNKr4k8RgrTvS1z6IYvBqWCHu/i8hp9xepAGOMTNB5cA==
+2016/12/16 15:32:21 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 15:32:21 delete one message.
+2016/12/16 15:32:22 no message
+2016/12/16 15:32:23 no message
+2016/12/16 15:32:24 no message
+2016/12/16 15:32:25 no message
+2016/12/16 15:32:26 no message
+2016/12/16 15:32:27 no message
+2016/12/16 15:32:28 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:32:28 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:32:28 5850e874d026670010d6b7f9 AQEBxbPNXdKl9qETRaj4JEL60eH6iZBBdty0Jf93W89CpMVp6EySsnEZPjhF5GzqrzM8fU1wJkIDuhDIj1eq+0abNuonVyATBRZOqzS6IPiE8QWl2Iy0/czu+pmY8QWh21OaBFoiGLbh+FtFjd+m5Ex0yydoaDX/7TJjIN43vw/eFGSEmvlyUXz9XqQ1kP8fZNwEUJRHWo92mXDdWEzFb8THjrQtUFfBD2eHMy+n7b9ib4Wm0gcWcoqGQfM98pRjP2c15ZMDDM595wZU23K3p8M/xzlb56vUTINxbq7//E9bZ0B1jI+l80jisWffTyrO67Dvp5Nr7/yYb4n1L7OP32yPcKlr12XJTsVo1i2Ob/iMIJ57SwUEhqhc9ahw1z5J2jNjQPinduWeKTYRsGu6gUGXpg==
+2016/12/16 15:32:28 5850e874d026670010d6b7f9 emulator-5558
+2016/12/16 15:32:28 delete one message.
+2016/12/16 15:32:28 exits because all emulators are used now.
+2016/12/16 15:32:49 log initialization is done.
+2016/12/16 15:32:49 system restart...
+2016/12/16 15:32:49 local env initialization is done.
+2016/12/16 15:32:49 pulic ip:  54.149.214.76
+2016/12/16 15:32:49 local ip:  172.31.16.251
+2016/12/16 15:32:49 availability zone:  us-west-2b
+2016/12/16 15:32:49 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:32:49 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:32:49 5850e874d026670010d6b7f9 AQEBBI4TZnQryES8ubdZfsZqECPxkKTTJsIBrYA2VOo7R1LY6rBZn08ia2iapL0kKKmWst+HdneRBgKQY/1APLwKxcuS3Mqibn6prsc0tD/fl7YkTVKMscv+gShUs/4FHLwzpbOTuFR7rO8lcpB4Nlh7UzFPICBlqFpoQl1FW72uWo2jN2aF6CNKvU+rcqoYmhnmMSO5dHP0a0LfNmLMh2WLzNWA7cDZACeJtRlB5/gjCyHbViqavjni4lv2NyNTHjVPPDOSeJcCO2ZtzymGIkqUkdxr7CoaCSJfUdb0KwBxI3zhn/SdNHRZMqeMpUk6x3JzpbUCTN7oErJbwN/JaP8Cv6epCBC65dtTt3ZDTMgNNhOMREiCm3/9SCsPBP92RnpRlqikT7ZxnteBmVUY5mMcUw==
+2016/12/16 15:32:49 5850e874d026670010d6b7f9 emulator-5554
+2016/12/16 15:32:49 delete one message.
+2016/12/16 15:32:49 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:32:49 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:32:49 5850e874d026670010d6b7f9 AQEB9v9gsGakFqmkXEIXhnn27GKQEMmuebejYCgJuF1G2ToojtU9XneWJpTqmgXf8Jr+fcWsJnBph8z1HQBPYdj8IR6Fc2tunIKfsfA4NCJ+wFctw2L2r/STTucPJlg0smd0IvptErINY+9ivvwEgcsSbF5Vpmn6dMbEsieic617N6FeAPKLoA1zW3Ng3HBH+Yz0q3F0Mf9I9QaMrO2vH5+kj2SzYvOpvi4H0fNFBS1sLJs3nTFdt+p/xmMsnDwwyCwiT55sxFpMjSil965nn8sbfprpvrFNEv9MhYOdDInDHOxAbMHn0doyNoM5c0YpAjLzmsnIzq0UMEM5lMgPbfyQML8g2e1dTQTtvOHJKpjLHJH/KD0qJ9wbtSMrTA8a/4vYRILESu+qdKz3VoOUbYv7sQ==
+2016/12/16 15:32:49 5850e874d026670010d6b7f9 emulator-5556
+2016/12/16 15:32:49 delete one message.
+2016/12/16 15:32:49 receive one message with body:  {
+    "_id" : "5850e874d026670010d6b7f9",
+    "status" : "occupied",
+    "region" : "us-west-2",
+    "occupant" : "abc",
+    "adb_uri" : "",
+    "spec" : {}
+}
+
+2016/12/16 15:32:49 receive one message with object:  5850e874d026670010d6b7f9
+2016/12/16 15:32:49 5850e874d026670010d6b7f9 AQEByTdxXci3p7yGmw9Hjhbvm4BLAhLxN10lEn+4NSJEhAXIs1+jHEsrIMFo2ebEn5v71I8JmUnVuZeAMQn+3uu0NC/YmFg9Q2VxxV+0gQMbtb+Bat/uaSqVqMthvTb5Cw3xiNJtSWc+rrj1mgtYzcXIf9i7mKiaxGFCE+9VDXsFPENcSwE3EZ6TqAI4ji2PRqeha7pkP4zyOZ1/jQyTjCg8haQkNAQh8FAylwQxDt6Pg75ivMHnuMvBXuDqS2SvYglVFse3Pf3lp+ZojoV9dSL3KXUkCIXbNA6rwFNXhVrr0TuFMiyDq8wGk5ilHyE9aEaVIv08zHfWhBNX2q6rYTVIXio14byXPSkKtju4Q/OaP1IvXcCxPGKBDESQ+jDxjt0uIa/lsJYcY2FyZqi2Sw+2Cg==
+2016/12/16 15:32:49 5850e874d026670010d6b7f9 emulator-5558
+2016/12/16 15:32:49 delete one message.
+2016/12/16 15:32:49 exits because all emulators are used now.
