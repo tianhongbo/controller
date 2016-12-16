@@ -2,15 +2,29 @@ package main
 
 import (
 	"encoding/json"
-	"log"
+	"errors"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
+	"io/ioutil"
+	"log"
+	"net/http"
 )
 
 const AWS_SQS_URL = "https://sqs.us-west-2.amazonaws.com/497100832806/MTaaS-emulator-queue"
 const AWS_SQS_ARN = "arn:aws:sqs:us-west-2:497100832806:MTaaS-emulator-queue"
 const AWS_CURRENT_REGION = "us-west-2"
+const AWS_PUBLIC_IP_URI = "http://instance-data/latest/meta-data/public-ipv4"
+const AWS_LOCAL_IP_URI = "http://instance-data/latest/meta-data/local-ipv4"
+const AWS_AVAILABILITY_ZONE_URI = "http://instance-data/latest/meta-data/placement/availability-zone"
+
+type LocalEnv struct {
+	PublicIp	string
+	LocalIp		string
+	AvailabilityZone	string
+}
+
+var localEnv LocalEnv
 
 type ReqEmulatorMsg struct {
 	Id		string	`json:"_id"`
@@ -22,15 +36,120 @@ type ReqEmulatorMsg struct {
 }
 
 type RspEmulatorMsg struct {
+}
 
+type EmulatorNew struct {
+	Name	string
+	Port	int
+	Used	bool
+}
+
+// need to update with the maximum emulators supported
+var emulatorsNew = []EmulatorNew {
+	//1
+	EmulatorNew {
+		Name: "emulator-5554",
+		Port: 5555,
+		Used: false,
+	},
+	//2
+	EmulatorNew {
+		Name: "emulator-5556",
+		Port: 5557,
+		Used: false,
+	},
+	//3
+	EmulatorNew {
+		Name: "emulator-5558",
+		Port: 5559,
+		Used: false,
+	},
+/*
+	//4
+	EmulatorNew {
+		Name: "emulator-5560",
+		Port: 5561,
+		Used: false,
+	},
+	//5
+	EmulatorNew {
+		Name: "emulator-5562",
+		Port: 5563,
+		Used: false,
+	},
+	//6
+	EmulatorNew {
+		Name: "emulator-5564",
+		Port: 5565,
+		Used: false,
+	},
+	//7
+	EmulatorNew {
+		Name: "emulator-5566",
+		Port: 5567,
+		Used: false,
+	},
+	//8
+	EmulatorNew {
+		Name: "emulator-5568",
+		Port: 5569,
+		Used: false,
+	},
+	//9
+	EmulatorNew {
+		Name: "emulator-5570",
+		Port: 5571,
+		Used: false,
+	},
+	//10
+	EmulatorNew {
+		Name: "emulator-5572",
+		Port: 5573,
+		Used: false,
+	},
+*/
 }
 
 func init() {
-	//createEmulators()
+	localEnv.PublicIp = getVmMetaData(AWS_PUBLIC_IP_URI)
+	localEnv.LocalIp = getVmMetaData(AWS_LOCAL_IP_URI)
+	localEnv.AvailabilityZone = getVmMetaData(AWS_AVAILABILITY_ZONE_URI)
+
+	log.Println("local env is intialized.",
+		" pulic ip: ", localEnv.PublicIp,
+		" local ip: ", localEnv.LocalIp,
+		" availability zone: ", localEnv.AvailabilityZone)
+}
+
+func getVmMetaData (uri string) string {
+	//get public ip
+	resp, err := http.Get(uri)
+	if err != nil {
+		// handle error
+		log.Println("fail to get public IP.")
+		return ""
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Println("fail to decode public ip from response.")
+		return ""
+	}
+	return string(body)
+}
+
+func getOneEmulator() (EmulatorNew, error) {
+	for i, v := range emulatorsNew {
+		if v.Used != true {
+			emulatorsNew[i].Used = true
+			return v, nil
+		}
+	}
+	e := EmulatorNew{}
+	return e, errors.New("no available emulators.")
 }
 
 func main() {
-	var req ReqEmulatorMsg
 
 	sess, err := session.NewSession()
 	if err != nil {
@@ -38,8 +157,34 @@ func main() {
 		return
 	}
 
-
 	svc := sqs.New(sess, &aws.Config{Region: aws.String(AWS_CURRENT_REGION)})
+
+	for {
+		// receive one message
+		req, handler, err := getOneMsg(svc)
+		if err != nil {
+			continue
+		}
+		log.Println(req.Id, handler)
+
+		// process the message
+		err = doOneMsg(req)
+		if err != nil {
+			// do not delete the message from sqs queue
+			log.Println("fail to process the request.")
+			continue
+		}
+
+		// delete the message
+		deleteOneMsg(svc, handler)
+
+		// delay for 
+	}
+}
+
+func getOneMsg (svc *sqs.SQS) (ReqEmulatorMsg, string, error ) {
+
+	var req ReqEmulatorMsg
 
 	params := &sqs.ReceiveMessageInput{
 		QueueUrl: aws.String(AWS_SQS_URL), // Required
@@ -51,24 +196,25 @@ func main() {
 		VisibilityTimeout:       aws.Int64(1),
 		WaitTimeSeconds:         aws.Int64(1),
 	}
+
 	resp, err := svc.ReceiveMessage(params)
 
 	if err != nil {
 		// Print the error, cast err to awserr.Error to get the Code and
 		// Message from an error.
 		log.Println(err.Error())
-		return
+		return ReqEmulatorMsg{}, "", errors.New("fail to unmarshal Json from create emulator request.")
 	}
 	if len(resp.Messages) < 1 {
 		log.Println("no message")
-		return
+		return ReqEmulatorMsg{}, "", errors.New("fail to unmarshal Json from create emulator request.")
 	}
 	body := []byte(*(resp.Messages[0].Body))
 
 	// decode text message to json
         if err := json.Unmarshal(body, &req); err != nil {
-                log.Println("Error! Can't unmarshal Json from create emulator request.")
-                return
+		log.Println("Error! Can't unmarshal Json from create emulator request.")
+		return ReqEmulatorMsg{}, "", errors.New("fail to unmarshal Json from create emulator request.")
         }
 
 	// Pretty-print the response data.
@@ -76,14 +222,33 @@ func main() {
 
 	log.Println("receive one message with object: ", req.Id)
 
-	// handle the message
+	return req, *(resp.Messages[0].ReceiptHandle), nil
 
-	// delete the message
-	delete_params := &sqs.DeleteMessageInput{
-		QueueUrl:      aws.String(AWS_SQS_URL), // Required
-		ReceiptHandle: aws.String(*(resp.Messages[0].ReceiptHandle)), // Required
+}
+
+// handle one message
+func doOneMsg (req ReqEmulatorMsg) error {
+	emu, err := getOneEmulator()
+	if err != nil {
+		// do not delete the message from sqs queue
+		log.Println("fail to allocate a emulator.")
+		return errors.New("fail to allocate a emlator.")
 	}
-	_, err = svc.DeleteMessage(delete_params)
+	log.Println(req.Id, emu.Name)
+
+	// set db
+
+	return nil
+}
+
+// delete one message
+func deleteOneMsg (svc *sqs.SQS, ReceiptHandle string) {
+
+	params := &sqs.DeleteMessageInput{
+		QueueUrl:      aws.String(AWS_SQS_URL), // Required
+		ReceiptHandle: aws.String(ReceiptHandle), // Required
+	}
+	_, err := svc.DeleteMessage(params)
 
 	if err != nil {
 		// Print the error, cast err to awserr.Error to get the Code and
