@@ -358,3 +358,7 @@ echo "initialization is done"
 
 exit 0
 ```
+
+# Resources
+## How to configure adb connect to remote emulator
+http://www.41post.com/5003/programming/android-adb-remote-emulator-access
