@@ -229,6 +229,8 @@ export GOPATH="/home/ubuntu/controller"
 ```
 ## 3. configure port forwarding for adb connect
 - to support remote machine to connect the emulators via "adb connect <ip>:<port>"
+- use iptables to implement port forwarding
+- use iptables-persistent to persist the rules
 
 configure
 
@@ -270,6 +272,13 @@ target     prot opt source               destination
 
 Chain POSTROUTING (policy ACCEPT)
 target     prot opt source               destination
+```
+
+persist the rules by installing iptables-persistent
+
+```
+$ sudo apt-get install iptables-persistent
+Reading package lists... Done
 ```
 
 ## 3. configure port forwarding for SSH functions
