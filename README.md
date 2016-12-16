@@ -227,6 +227,50 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/android-sdk-linux/tools/lib64:/usr/local/android-sdk-linux/tools/lib64/qt/lib"
 export GOPATH="/home/ubuntu/controller"
 ```
+## 3. configure port forwarding for adb connect
+- to support remote machine to connect the emulators via "adb connect <ip>:<port>"
+
+configure
+
+```
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5555 -j DNAT --to-destination 127.0.0.1:5555
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5557 -j DNAT --to-destination 127.0.0.1:5557
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5559 -j DNAT --to-destination 127.0.0.1:5559
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5561 -j DNAT --to-destination 127.0.0.1:5561
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5563 -j DNAT --to-destination 127.0.0.1:5563
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5565 -j DNAT --to-destination 127.0.0.1:5565
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5567 -j DNAT --to-destination 127.0.0.1:5567
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5569 -j DNAT --to-destination 127.0.0.1:5569
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5571 -j DNAT --to-destination 127.0.0.1:5571
+$ sudo iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5573 -j DNAT --to-destination 127.0.0.1:5573
+```
+
+check the configuration
+
+```
+$ sudo iptables -t nat -L
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5573 to:127.0.0.1:5573
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5571 to:127.0.0.1:5571
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5569 to:127.0.0.1:5569
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5567 to:127.0.0.1:5567
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5565 to:127.0.0.1:5565
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5563 to:127.0.0.1:5563
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5561 to:127.0.0.1:5561
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5559 to:127.0.0.1:5559
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5557 to:127.0.0.1:5557
+DNAT       tcp  --  anywhere             anywhere             tcp dpt:5555 to:127.0.0.1:5555
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+
+Chain POSTROUTING (policy ACCEPT)
+target     prot opt source               destination
+```
 
 ## 3. configure port forwarding for SSH functions
 - iptables for Ubuntu
