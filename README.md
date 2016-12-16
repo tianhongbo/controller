@@ -238,9 +238,10 @@ For example(for ubuntu):
 `iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921`
 
 ### This is for wlan
-`sysctl -w net.ipv4.conf.wlan0.route_localnet=1`
-`iptables -t nat -I PREROUTING -p tcp -i wlan0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921`
-
+```
+$ sysctl -w net.ipv4.conf.wlan0.route_localnet=1
+$ iptables -t nat -I PREROUTING -p tcp -i wlan0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
+```
 # How can I debug?
 ## 1. check adb forward
 `$ adb forward --list`
