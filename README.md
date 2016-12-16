@@ -234,8 +234,10 @@ export GOPATH="/home/ubuntu/controller"
 
 For example(for ubuntu):
 ### This is for eth0
-`sysctl -w net.ipv4.conf.eth0.route_localnet=1`
-`iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921`
+```
+$ sysctl -w net.ipv4.conf.eth0.route_localnet=1
+$ iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
+```
 
 ### This is for wlan
 ```
