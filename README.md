@@ -236,12 +236,28 @@ For example(for ubuntu):
 ### This is for eth0
 ```
 $ sysctl -w net.ipv4.conf.eth0.route_localnet=1
+
+or 
+
+$ sudo vi /etc/sysctl.conf
+# port forwarding for adb connect
+net.ipv4.conf.eth0.route_localnet = 1
+```
+```
 $ iptables -t nat -I PREROUTING -p tcp -i eth0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
 ```
 
 ### This is for wlan
 ```
 $ sysctl -w net.ipv4.conf.wlan0.route_localnet=1
+
+or 
+
+$ sudo vi /etc/sysctl.conf
+# port forwarding for adb connect
+net.ipv4.conf.eth0.route_localnet = 1
+```
+```
 $ iptables -t nat -I PREROUTING -p tcp -i wlan0 --dport 5921 -j DNAT --to-destination 127.0.0.1:5921
 ```
 # How can I debug?
